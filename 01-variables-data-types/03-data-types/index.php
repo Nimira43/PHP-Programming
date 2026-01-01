@@ -74,16 +74,16 @@ echo '<br >';
 - fopen opens a "resource handle" which is basically a pointer to the file
 - PHP says here is the handle to the file but I haven’t read anything from it yet.
 */
-$file = fopen('test.txt', 'r');
+$file = fopen('example.txt', 'r');
 var_dump($file);
 echo '<br >';
 
 // Two ways reading the file are:
-$contentsDemoOne = fread($file, filesize('test.txt'));
+$contentsDemoOne = fread($file, filesize('example.txt'));
 var_dump($contentsDemoOne);
 echo '<br >';
 // or
-$contentsDemoTwo = file_get_contents('test.txt');
+$contentsDemoTwo = file_get_contents('example.txt');
 var_dump($contentsDemoTwo);
 echo '<br >';
 ?>

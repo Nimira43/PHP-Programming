@@ -32,7 +32,7 @@ echo 'You can ', 'echo multiple ', 'statements ', 'like this, ', ' but cannot', 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="icon" href="./TheFavicon.png">
+  <link rel="icon" href="../../99-favicon/TheFavicon.png">
   <style>
     * {
       font-family: 'Poppins', sans-serif;
@@ -65,7 +65,7 @@ echo 'You can ', 'echo multiple ', 'statements ', 'like this, ', ' but cannot', 
         <?php echo 'Introduction to PHP'; ?>
       </h1>
       <?php
-        echo '
+      echo '
           <p class="text-gray-700 leading-relaxed mb-2">
             PHP is a widely used server-side scripting language designed for building dynamic and interactive web applications. It integrates smoothly with HTML and provides developers with a straightforward way to generate content on the server before sending it to the browser. 
           </p>
@@ -77,7 +77,7 @@ echo 'You can ', 'echo multiple ', 'statements ', 'like this, ', ' but cannot', 
       </h2>
 
       <?=
-        '<ul class="list-disc pl-6 space-y-1 text-gray-700">
+      '<ul class="list-disc pl-6 space-y-1 text-gray-700">
           <li>Server-side execution for generating dynamic content</li>
           <li>Broad support for databases, including MySQL and PostgreSQL</li>
           <li>Extensive standard library and community-driven ecosystem</li>
@@ -90,7 +90,7 @@ echo 'You can ', 'echo multiple ', 'statements ', 'like this, ', ' but cannot', 
       </h2>
 
       <?php
-        echo '
+      echo '
           <div class="flex gap-4">
             <button class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-300 transitioning">
               Learn More

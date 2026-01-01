@@ -1,0 +1,61 @@
+Test 1
+Answer each question in your own words or with code.
+----------------------------------------------------
+
+SECTION A — PHP TAGS, PRINTING & COMMENTS
+1. Write the correct PHP opening tag.
+2. What is the difference between echo and print? Give two differences.
+
+3. Write a single‑line comment and a multi‑line comment in PHP.
+4. Why is it common to omit the closing ?> tag in pure PHP files?
+
+SECTION B — VARIABLES
+5. Write three valid PHP variable names and one invalid one. Explain why the invalid one fails.
+6. What is the difference between $name and $Name in PHP?
+7. Create three variables: $title, $year, and $pi, and echo them inside HTML.
+
+SECTION C — DATA TYPES
+8. For each of the following values, state the PHP data type:
+  a) "Hello"
+  b) 42
+  c) 3.14
+  d) true
+  e) ['a', 'b', 'c']
+  f) new stdClass()
+  g) null
+
+9. What does var_dump() show that echo does not?
+10. What does gettype() return?
+
+SECTION D — ARRAYS
+11. Create an array of three animals and echo the second one.
+12. What is the difference between var_dump($array) and print_r($array)?
+
+SECTION E — OBJECTS
+13. Create a stdClass object called $grades with two properties: Alice and Bob. Give Alice 90 and Bob 72.
+14. Echo Bob’s grade.
+
+SECTION F — NULL
+15. Create a variable set to null and explain what happens when you echo it.
+
+SECTION G — RESOURCES
+16. What does fopen() return? Explain in your own words.
+17. Why does echo $file output something like Resource id #3?
+18. Write code that reads the contents of test.txt using file_get_contents().
+
+SECTION H — THE MIND GRENADE (STRING CONCATENATION)
+19. Create two variables:
+
+  $firstName = "Lenny";
+  $lastName = "The Cat";
+
+Then output:
+
+  Lenny The Cat
+
+BUT you must do it using string concatenation, not interpolation.
+
+(You’ll need the . operator — and yes, this is the part that nudges you into the next chapter.)
+
+SECTION I — BONUS
+20. Explain why <?= print_r($value) ?> sometimes outputs a 1 at the end.

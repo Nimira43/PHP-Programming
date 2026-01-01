@@ -25,7 +25,7 @@
   <header class="bg-orange-500 p-4">
     <div class="container mx-auto">
       <h4 class="text-xl font-medium uppercase text-black">Variable and Data Types</h4>
-      <h1 class="text-3xl font-semibold text-white">Topic</h1>
+      <h1 class="text-3xl font-semibold text-white">Test 1</h1>
     </div>
   </header>
 
@@ -33,7 +33,7 @@
     <div class="bg-white rounded-lg shadow-md p-6">
 
       <h1 class="text-2xl font-semibold text-gray-800 mb-4">
-        Introduction to PHP
+        Test 1
       </h1>
       <p class="text-gray-700 leading-relaxed mb-2">
         PHP is a widely used server-side scripting language designed for building dynamic and interactive web applications. It integrates smoothly with HTML and provides developers with a straightforward way to generate content on the server before sending it to the browser.
