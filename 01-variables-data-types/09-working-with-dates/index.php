@@ -28,7 +28,7 @@ $output = null;
 <body class="bg-gray-100">
   <header class="bg-orange-500 p-4">
     <div class="container mx-auto">
-      <h4 class="text-xl font-medium uppercase text-black">Variable and Data Types</h4>
+      <h4 class="text-md font-medium uppercase text-black">Variables and Data Types</h4>
       <h1 class="text-3xl font-semibold text-white">Topic</h1>
     </div>
   </header>

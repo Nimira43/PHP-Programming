@@ -1,6 +1,6 @@
 <?php
 /*
-  PHP DATA TYPES:
+  PHP Data Types:
 
 - String
 - Integer
@@ -9,8 +9,83 @@
 - Array
 - Object
 - NULL
-- Resource
+- Resource - an external resource such as a file.
 */
+
+// String
+$heading = 'Data Types in PHP';
+$languageType = "PHP is a loosely type language.";
+
+/* 
+- var_dump gives:
+  - the type of the variable 
+  - its length (with a string, an array and an object) 
+  - its content
+*/
+var_dump($heading);
+echo '<br >';
+
+// getType must be used with echo before it. It returns just the type.
+echo getType($languageType);
+echo '<br >';
+
+// Integer
+$year = 2026;
+var_dump($year);
+echo '<br >';
+
+// Float
+$pi = 3.142;
+var_dump($pi);
+echo '<br >';
+
+// Boolean
+$isLoaded = true;
+var_dump($isLoaded);   // Returns 1 in the HTML
+echo '<br >';
+
+// Arrays
+$pets = ['cat', 'dog', 'rabbit', 'hamster'];
+var_dump($pets);
+echo '<br >';
+
+$mixUp = ['Bob', 55, false];
+var_dump($mixUp);
+print_r($mixUp); // print_r outputs raw text
+echo '<br >';
+
+// Objects
+$grades = new stdClass();
+$grades->Alice = 89;
+$grades->Billy = 64;
+$grades->Chloe = 76;
+$grades->David = 93;
+var_dump($grades);
+echo '<br >';
+
+// Null
+$car = null;
+var_dump($car); // nothing is shown in the HTML where this is called
+echo '<br >';
+
+// Resource
+
+/* 
+- fopen opens a "resource handle" which is basically a pointer to the file
+- PHP says here is the handle to the file but I haven’t read anything from it yet.
+*/
+$file = fopen('test.txt', 'r');
+var_dump($file);
+echo '<br >';
+
+// Two ways reading the file are:
+$contentsDemoOne = fread($file, filesize('test.txt'));
+var_dump($contentsDemoOne);
+echo '<br >';
+// or
+$contentsDemoTwo = file_get_contents('test.txt');
+var_dump($contentsDemoTwo);
+echo '<br >';
 ?>
 
 <!DOCTYPE html>
@@ -39,49 +114,65 @@
 <body class="bg-gray-100">
   <header class="bg-orange-500 p-4">
     <div class="container mx-auto">
-      <h4 class="text-xl font-medium uppercase text-black">Variable and Data Types</h4>
-      <h1 class="text-3xl font-semibold text-white">Topic</h1>
+      <h4 class="text-md font-medium uppercase text-black">Variables and Data Types</h4>
+      <h1 class="text-3xl font-semibold text-white">Data Types</h1>
     </div>
   </header>
 
   <div class="container mx-auto p-4 mt-4">
     <div class="bg-white rounded-lg shadow-md p-6">
 
-      <h1 class="text-2xl font-semibold text-gray-800 mb-4">
-        Introduction to PHP
-      </h1>
-      <p class="text-gray-700 leading-relaxed mb-2">
-        PHP is a widely used server-side scripting language designed for building dynamic and interactive web applications. It integrates smoothly with HTML and provides developers with a straightforward way to generate content on the server before sending it to the browser.
-      </p>
-      <p class="text-gray-700 leading-relaxed mb-2">
-        Modern PHP has evolved significantly, offering strong performance, improved syntax, and a rich ecosystem of frameworks and tools. Its flexibility allows developers to create anything from small scripts to large-scale enterprise systems.
-      </p>
-      <p class="text-gray-700 leading-relaxed mb-4">
-        As you explore PHP, you will encounter concepts such as variables, functions, arrays, and object-oriented programming. Understanding these fundamentals will give you a solid foundation for building reliable and maintainable applications.
-      </p>
-
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-        Key Features of PHP
+      <h2 class="text-2xl font-semibold text-red-800 mb-4">
+        <?= $heading ?>
       </h2>
-      <ul class="list-disc pl-6 space-y-1 text-gray-700">
-        <li>Server-side execution for generating dynamic content</li>
-        <li>Broad support for databases, including MySQL and PostgreSQL</li>
-        <li>Extensive standard library and community-driven ecosystem</li>
-        <li>Compatibility with major web servers and operating systems</li>
+      <ul class="list-disc pl-6 space-y-1 text-grey-700">
+        <li>
+          <?php echo $languageType ?>
+        </li>
+        <li>
+          <?= $year ?>
+        </li>
+        <li>
+          <?php echo $pi ?>
+        </li>
+        <li>
+          <?= $isLoaded ?>
+        </li>
+        <li>
+          <?= $pets[2] ?>
+        </li>
+        <li>
+          <?php echo $mixUp[1] ?>
+        </li>
+        <li>
+          <?php echo $grades->Alice ?>
+        </li>
+        <li>
+          <?= $grades->David ?>
+        </li>
+        <li>
+          <?php echo $car ?>
+        </li>
       </ul>
-
-      <h2 class="text-2xl font-semibold text-gray-800 my-4">
-        Actions
-      </h2>
-      <div class="flex gap-4">
-        <button class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-300 transitioning">
-          Learn More
-        </button>
-        <button class="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transitioning">
-          Start a Project
-        </button>
-      </div>
-
+      <p class='p-2 bg-gray-100 my-2'>
+        <span class='text-red-500 font-medium pr-2'>print_f: </span>
+        <?php print_r($mixUp) ?>
+      </p>
+      <p class='p-2 bg-gray-100 my-2'>
+        <span class='text-red-500 font-medium pr-2'>print_f: </span>
+        <?= print_r($grades) ?>
+      </p>
+      <p class='p-2 bg-gray-100 my-2'>
+        <?php echo $file ?>
+      </p>
+      <p class='p-2 bg-gray-100 my-2'>
+        <span class='text-red-500 font-medium pr-2'>fread(): </span>
+        <?php echo $contentsDemoOne ?>
+      </p>
+      <p class='p-2 bg-gray-100 my-2'>
+        <span class='text-red-500 font-medium pr-2'>file_get_contents(): </span>
+        <?= $contentsDemoTwo ?>
+      </p>
     </div>
   </div>
 </body>
