@@ -1,3 +1,14 @@
+<?php
+$title1 = 'This is ';
+$title2 = 'Concatenation';
+
+$firstName = 'John';
+$lastName = 'Smith';
+
+$fullName = $firstName . ' ' . $lastName;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +36,7 @@
   <header class="bg-orange-500 p-4">
     <div class="container mx-auto">
       <h4 class="text-md font-medium uppercase text-black">Variables and Data Types</h4>
-      <h1 class="text-3xl font-semibold text-white">Topic</h1>
+      <h1 class="text-3xl font-semibold text-white">String Concatenation</h1>
     </div>
   </header>
 
@@ -33,39 +44,18 @@
     <div class="bg-white rounded-lg shadow-md p-6">
 
       <h1 class="text-2xl font-semibold text-gray-800 mb-4">
-        Introduction to PHP
+        <?= $title1 . $title2 ?>
       </h1>
       <p class="text-gray-700 leading-relaxed mb-2">
-        PHP is a widely used server-side scripting language designed for building dynamic and interactive web applications. It integrates smoothly with HTML and provides developers with a straightforward way to generate content on the server before sending it to the browser.
+        <?= 'Say hello to ' . $fullName ?>
       </p>
       <p class="text-gray-700 leading-relaxed mb-2">
-        Modern PHP has evolved significantly, offering strong performance, improved syntax, and a rich ecosystem of frameworks and tools. Its flexibility allows developers to create anything from small scripts to large-scale enterprise systems.
+        <?= "Say hello again to $fullName" ?>
       </p>
       <p class="text-gray-700 leading-relaxed mb-4">
-        As you explore PHP, you will encounter concepts such as variables, functions, arrays, and object-oriented programming. Understanding these fundamentals will give you a solid foundation for building reliable and maintainable applications.
+        <?= 'Escaping \'characters\'' ?>
       </p>
 
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-        Key Features of PHP
-      </h2>
-      <ul class="list-disc pl-6 space-y-1 text-gray-700">
-        <li>Server-side execution for generating dynamic content</li>
-        <li>Broad support for databases, including MySQL and PostgreSQL</li>
-        <li>Extensive standard library and community-driven ecosystem</li>
-        <li>Compatibility with major web servers and operating systems</li>
-      </ul>
-
-      <h2 class="text-2xl font-semibold text-gray-800 my-4">
-        Actions
-      </h2>
-      <div class="flex gap-4">
-        <button class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-300 transitioning">
-          Learn More
-        </button>
-        <button class="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transitioning">
-          Start a Project
-        </button>
-      </div>
 
     </div>
   </div>
