@@ -1,3 +1,83 @@
+<?php
+$number1 = 5;
+$number2 = 10;
+$number3 = '20';
+var_dump($number3);
+echo '<br >';
+$number4 = '25';
+$number5 = 0;
+
+// Implicit Conversion
+
+$result1 = $number1 + $number2;
+var_dump($result1);
+echo '<br >';
+
+// int (string to int)
+$result2 = $number1 + $number3;
+var_dump($result2);
+echo '<br >';
+
+// int (strings to int)
+$result3 = $number4 + $number3;
+var_dump($result3);
+echo '<br >';
+
+// Concatenation
+// string (ints to string)
+$result4 = $number1 . $number2;
+var_dump($result4);
+echo '<br >';
+// string (int to string)
+$result5 = $number1 . $number3;
+var_dump($result5);
+echo '<br >';
+$result6 = $number4 . $number3;
+var_dump($result6);
+echo '<br >';
+
+// Uncaught TypeError: Unsupported operand types: string + int
+
+/*
+$fruit = 'orange';
+$result7 = $fruit + $number1;
+var_dump($result7);
+echo '<br >';
+*/
+
+$bool1 = true; // true = 1
+$bool2 = false; // false = 0
+$null = null; // null = 0
+
+// int (bool to int)
+$result8 = $number1 + $bool1;
+var_dump($result8);
+echo '<br >';
+$result9 = $number1 + $bool2;
+var_dump($result9);
+echo '<br >';
+
+// int (null to int)
+$result10 = $number1 + $null;
+var_dump($result10);
+echo '<br >';
+
+// Explicit Conversion
+$result11 = (string) $number1;
+var_dump($result11);
+echo '<br >';
+$result12 = (int) $number3;
+var_dump($result12);
+echo '<br >';
+$result13 = (bool) $number1;
+var_dump($result13);
+echo '<br >';
+$result14 = (bool) $number5;
+var_dump($result14);
+echo '<br >';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,48 +105,57 @@
   <header class="bg-orange-500 p-4">
     <div class="container mx-auto">
       <h4 class="text-md font-medium uppercase text-black">Variables and Data Types</h4>
-      <h1 class="text-3xl font-semibold text-white">Topic</h1>
+      <h1 class="text-3xl font-semibold text-white">Type Casting & Juggling</h1>
     </div>
   </header>
 
   <div class="container mx-auto p-4 mt-4">
     <div class="bg-white rounded-lg shadow-md p-6">
-
-      <h1 class="text-2xl font-semibold text-gray-800 mb-4">
-        Introduction to PHP
-      </h1>
       <p class="text-gray-700 leading-relaxed mb-2">
-        PHP is a widely used server-side scripting language designed for building dynamic and interactive web applications. It integrates smoothly with HTML and provides developers with a straightforward way to generate content on the server before sending it to the browser.
+        Adding two ints
       </p>
       <p class="text-gray-700 leading-relaxed mb-2">
-        Modern PHP has evolved significantly, offering strong performance, improved syntax, and a rich ecosystem of frameworks and tools. Its flexibility allows developers to create anything from small scripts to large-scale enterprise systems.
+        <?= $number1 . ' + ' . $number2 . ' = ' . $result1 ?>
       </p>
-      <p class="text-gray-700 leading-relaxed mb-4">
-        As you explore PHP, you will encounter concepts such as variables, functions, arrays, and object-oriented programming. Understanding these fundamentals will give you a solid foundation for building reliable and maintainable applications.
+      <p class="text-gray-700 leading-relaxed mb-2">
+        Adding an int to a string number
       </p>
-
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-        Key Features of PHP
-      </h2>
-      <ul class="list-disc pl-6 space-y-1 text-gray-700">
-        <li>Server-side execution for generating dynamic content</li>
-        <li>Broad support for databases, including MySQL and PostgreSQL</li>
-        <li>Extensive standard library and community-driven ecosystem</li>
-        <li>Compatibility with major web servers and operating systems</li>
-      </ul>
-
-      <h2 class="text-2xl font-semibold text-gray-800 my-4">
-        Actions
-      </h2>
-      <div class="flex gap-4">
-        <button class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-300 transitioning">
-          Learn More
-        </button>
-        <button class="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transitioning">
-          Start a Project
-        </button>
-      </div>
-
+      <p class="text-gray-700 leading-relaxed mb-2">
+        <?= $number1 . ' + ' . $number3 . ' = ' . $result2 ?>
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-2">
+        Adding two string numbers
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-2">
+        <?= $number4 . ' + ' . $number3 . ' = ' . $result3 ?>
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-2">
+        Concatenation
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-2">
+        <?= $number1 . ' . ' . $number2 . ' = ' . $result4 ?>
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-2">
+        <?= $number1 . ' . ' . $number3 . ' = ' . $result5 ?>
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-2">
+        <?= $number4 . ' . ' . $number3 . ' = ' . $result6 ?>
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-2">
+        Adding Booleans
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-2">
+        <?= $number1 . ' + ' . $bool1 . ' = ' . $result8 ?>
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-2">
+        <?= $number1 . ' + ' . $bool2 . ' = ' . $result9 ?>
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-2">
+        Adding Null
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-2">
+        <?= $number1 . ' + ' . $null . ' = ' . $result10 ?>
+      </p>
     </div>
   </div>
 </body>
