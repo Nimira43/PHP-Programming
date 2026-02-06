@@ -8,7 +8,6 @@ $number4 = '25';
 $number5 = 0;
 
 // Implicit Conversion
-
 $result1 = $number1 + $number2;
 var_dump($result1);
 echo '<br >';
