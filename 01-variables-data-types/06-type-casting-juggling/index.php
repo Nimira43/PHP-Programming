@@ -152,6 +152,7 @@ echo '<br >';
       <p class="text-gray-700 leading-relaxed mb-2">
         Adding Null
       </p>
+      
       <p class="text-gray-700 leading-relaxed mb-2">
         <?= $number1 . ' + ' . $null . ' = ' . $result10 ?>
       </p>
